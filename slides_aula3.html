@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Slides Aula 3 - Networking, Conteúdo e Oportunidades</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    body { font-family: 'Montserrat', Arial, sans-serif; background: #f7fafd; color: #222; }
+    .slide { min-height: 80vh; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 2rem 0; }
+    .slide-title { font-size: 2.2rem; color: #0d6efd; font-weight: 700; margin-bottom: 1rem; }
+    .slide-content { font-size: 1.15rem; max-width: 900px; }
+    .slide-list { font-size: 1.1rem; margin-left: 1.5rem; }
+    .slide-footer { position: fixed; bottom: 0; width: 100%; background: #0d6efd; color: #fff; text-align: center; padding: 0.5rem 0; letter-spacing: 1px; font-size: 1rem; }
+    .slide { display: none; }
+    .slide.active { display: flex; animation: fadeIn 0.7s; }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .slide-nav { position: fixed; right: 1rem; bottom: 2.5rem; z-index: 10; }
+    .slide-nav button { background: #0d6efd; color: #fff; border: none; padding: 0.7rem 1.2rem; margin: 0 0.3rem; border-radius: 2rem; font-size: 1.1rem; box-shadow: 0 2px 8px #0001; }
+    .slide-nav button:disabled { opacity: 0.5; }
+    .slide-logo { max-width: 120px; margin-bottom: 1.5rem; }
+    .exemplo { background: #e3f2fd; border-left: 5px solid #0d6efd; padding: 1rem 1.5rem; border-radius: 0.7rem; margin: 1.5rem 0; }
+  </style>
+</head>
+<body>
+<div id="slides">
+  <!-- Slide 1: Capa -->
+  <section class="slide active">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Logo LinkedIn" class="slide-logo">
+    <div class="slide-title">Aula 3: Networking, Conteúdo e Oportunidades</div>
+    <div class="slide-content">Curso LinkedIn para Jovens Aprendizes<br><span style="color:#0d6efd">Seminário Integrador IV • Polo Cuiabá, Turma 5</span></div>
+  </section>
+  <!-- Slide 2: Objetivo -->
+  <section class="slide">
+    <div class="slide-title">Objetivo da Aula</div>
+    <div class="slide-content">
+      Ensinar como expandir a rede de contatos e buscar oportunidades.<br>
+      Praticar a criação de conteúdo relevante para o LinkedIn.
+    </div>
+  </section>
+  <!-- Slide 3: Adicionando Contatos -->
+  <section class="slide">
+    <div class="slide-title">Como Adicionar Contatos?</div>
+    <div class="slide-content">
+      <ul class="slide-list">
+        <li>Procure colegas, professores, profissionais da área</li>
+        <li>Personalize o convite com uma mensagem amigável</li>
+        <li>Evite convites em massa sem contexto</li>
+      </ul>
+      <div class="exemplo"><strong>Template:</strong> Olá, vi que temos interesses em comum e gostaria de me conectar!</div>
+    </div>
+  </section>
+  <!-- Slide 4: Grupos e Eventos -->
+  <section class="slide">
+    <div class="slide-title">Participação em Grupos e Eventos</div>
+    <div class="slide-content">
+      <ul class="slide-list">
+        <li>Participe de grupos de interesse e comunidades acadêmicas</li>
+        <li>Acompanhe eventos online e presenciais</li>
+        <li>Compartilhe aprendizados e faça networking</li>
+      </ul>
+      <div class="exemplo"><strong>Dica:</strong> Grupos de jovens aprendizes, tecnologia, ciência e inovação são ótimos para networking!</div>
+    </div>
+  </section>
+  <!-- Slide 5: Busca de Vagas -->
+  <section class="slide">
+    <div class="slide-title">Busca de Vagas e Oportunidades</div>
+    <div class="slide-content">
+      <ul class="slide-list">
+        <li>Use filtros de vaga: localidade, área, tipo de vaga</li>
+        <li>Siga empresas e ative alertas de vagas</li>
+        <li>Pesquise palavras-chave relacionadas ao seu interesse</li>
+      </ul>
+      <div class="exemplo"><strong>Dica:</strong> Salve vagas de interesse e acompanhe o perfil das empresas.</div>
+    </div>
+  </section>
+  <!-- Slide 6: Conteúdo no LinkedIn -->
+  <section class="slide">
+    <div class="slide-title">Como Criar Conteúdo no LinkedIn?</div>
+    <div class="slide-content">
+      <ul class="slide-list">
+        <li>Posts: compartilhe conquistas, aprendizados, eventos</li>
+        <li>Artigos: escreva sobre temas do seu interesse</li>
+        <li>Comente e interaja com outros conteúdos</li>
+      </ul>
+      <div class="exemplo"><strong>Exemplo de post:</strong> “Hoje participei de um curso incrível sobre LinkedIn para jovens aprendizes! #JovemAprendiz #LinkedIn”</div>
+    </div>
+  </section>
+  <!-- Slide 7: Atividades Práticas -->
+  <section class="slide">
+    <div class="slide-title">Atividades Práticas</div>
+    <div class="slide-content">
+      <ul class="slide-list">
+        <li>Simulação: enviar convites e mensagens personalizadas</li>
+        <li>Brainstorm: ideias de posts para jovens aprendizes</li>
+        <li>Pesquisa de vagas ao vivo</li>
+      </ul>
+    </div>
+  </section>
+  <!-- Slide 8: Materiais Complementares -->
+  <section class="slide">
+    <div class="slide-title">Materiais Complementares</div>
+    <div class="slide-content">
+      <ul class="slide-list">
+        <li><a href="pdf_template_convite.html" target="_blank">Template de Mensagem de Convite</a></li>
+        <li><a href="pdf_guia_busca_vagas.html" target="_blank">Guia Rápido: Como Buscar Vagas</a></li>
+        <li><a href="curso_linkedin_materiais.html">Mais materiais do curso</a></li>
+      </ul>
+    </div>
+  </section>
+  <!-- Slide 9: Dicas Finais -->
+  <section class="slide">
+    <div class="slide-title">Dicas Finais</div>
+    <div class="slide-content">
+      <ul class="slide-list">
+        <li>Expanda sua rede com qualidade, não quantidade</li>
+        <li>Interaja com profissionais e empresas</li>
+        <li>Participe do grupo de networking: <a href="https://chat.whatsapp.com/EorqXsk3htc0wKnBmmvZvA" target="_blank">Clique aqui</a></li>
+      </ul>
+    </div>
+  </section>
+  <!-- Slide 10: Fim -->
+  <section class="slide">
+    <div class="slide-title">Fim da Aula 3</div>
+    <div class="slide-content">Dúvidas? Pergunte no grupo ou acesse os materiais complementares.<br><a href="curso_linkedin_index.html">Voltar ao Portal do Curso</a></div>
+  </section>
+</div>
+<div class="slide-nav">
+  <button id="prevSlide" disabled>&lt; Anterior</button>
+  <button id="nextSlide">Próximo &gt;</button>
+</div>
+<div class="slide-footer">Curso LinkedIn Jovem • Aula 3</div>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let current = 0;
+  function showSlide(idx) {
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+    document.getElementById('prevSlide').disabled = idx === 0;
+    document.getElementById('nextSlide').disabled = idx === slides.length - 1;
+  }
+  document.getElementById('prevSlide').onclick = function() { if (current > 0) showSlide(--current); };
+  document.getElementById('nextSlide').onclick = function() { if (current < slides.length - 1) showSlide(++current); };
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'ArrowRight') document.getElementById('nextSlide').click();
+    if(e.key === 'ArrowLeft') document.getElementById('prevSlide').click();
+  });
+</script>
+</body>
+</html>

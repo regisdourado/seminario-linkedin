@@ -1,0 +1,77 @@
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: linear-gradient(135deg, #e3f2fd 0%, #fff 100%);
+  color: #222;
+}
+.navbar {
+  background: #0d6efd !important;
+}
+.hero-section {
+  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  position: relative;
+}
+.hero-overlay {
+  background: rgba(13,110,253,0.7);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.section-title {
+  color: #0d6efd;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+.timeline {
+  border-left: 3px solid #0d6efd;
+  margin-left: 1.5rem;
+  padding-left: 2rem;
+}
+.timeline .event {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.timeline .event::before {
+  content: '\f111';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  color: #0d6efd;
+  position: absolute;
+  left: -2.1rem;
+  top: 0;
+  font-size: 1.1rem;
+  background: #fff;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+.icon-badge {
+  color: #ffc107;
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+}
+.material-link {
+  text-decoration: none;
+  color: #0d6efd;
+  font-weight: 500;
+}
+.material-link:hover {
+  text-decoration: underline;
+}
+footer {
+  background: #0d6efd;
+  color: #fff;
+  padding: 2rem 0 1rem 0;
+  margin-top: 3rem;
+}
