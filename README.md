@@ -18,6 +18,13 @@ Este repositório contém o site do Seminário Integrador IV, com informações 
 - Mario Marcos Morel – RGA 50000698
 - Matheus Nunes dos Santos – RGA 50000055
 - Nayara Gomes de Oliveira – RGA 50000867
+- Olivia Fernandes Boretti – RGA 50000869
+- Paulo Ricardo dos Santos Silva – RGA 50000185
+- Phelipe Matheus Sales Kinack – RGA 50000333
+- Quedna Brito dos Reis – RGA 50000188
+- Rafael Port Alpiri – RGA 50000188
+- Rander Teixeira Barros – RGA 50000765
+- Regis Alves Dourado – RGA 50000059
 
 ## 📱 Grupo WhatsApp
 [Entrar no grupo](https://chat.whatsapp.com/EorqXsk3htc0wKnBmmvZvA)
