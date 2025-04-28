@@ -14,18 +14,18 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#home">LinkedIn Jovem</a>
+      <a class="navbar-brand" href="index.html">LinkedIn Jovem</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#conteudo">Conteúdo</a></li>
-          <li class="nav-item"><a class="nav-link" href="#beneficios">Benefícios</a></li>
-          <li class="nav-item"><a class="nav-link" href="#como-participar">Como Participar</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#conteudo">Conteúdo</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#beneficios">Benefícios</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#como-participar">Como Participar</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
         </ul>
       </div>
     </div>
@@ -38,8 +38,8 @@
       <h1 class="display-4 fw-bold mb-3">LinkedIn para Jovens Aprendizes</h1>
       <p class="lead mb-4">Dê um boost na sua carreira com o LinkedIn! Aprenda a criar um perfil que chama atenção, fazer conexões e encontrar oportunidades. Curso 100% prático e online!</p>
       <div class="d-flex justify-content-center gap-3">
-        <a href="#como-participar" class="btn btn-warning btn-lg shadow">Quero Participar</a>
-        <a href="#conteudo" class="btn btn-outline-light btn-lg">Ver Conteúdo</a>
+        <a href="index.html#como-participar" class="btn btn-warning btn-lg shadow">Quero Participar</a>
+        <a href="index.html#conteudo" class="btn btn-outline-light btn-lg">Ver Conteúdo</a>
       </div>
     </div>
   </section>
@@ -87,28 +87,28 @@
           <h3>Aula 1: Introdução ao LinkedIn e Marca Pessoal</h3>
           <p>Descubra o que é o LinkedIn, como ele funciona e por que é tão importante pra sua carreira. Aprenda a criar sua marca pessoal e veja perfis que bombam na plataforma.</p>
           <div class="mt-3">
-            <a href="#" class="material-link"><i class="fas fa-file-pdf me-2"></i>Guia Rápido: O que é LinkedIn?</a>
+            <a href="docs/pocket_guide_linkedin.pdf" class="material-link" target="_blank"><i class="fas fa-file-pdf me-2"></i>Guia Rápido: O que é LinkedIn?</a>
           </div>
         </div>
         <div class="event" data-aos="fade-up" data-aos-delay="100">
           <h3>Aula 2: Criação e Otimização do Perfil</h3>
           <p>Monte seu perfil do zero e entenda cada parte importante. Dicas práticas pra escolher a foto perfeita, criar um título que chama atenção e escrever um resumo que impressiona.</p>
           <div class="mt-3">
-            <a href="#" class="material-link"><i class="fas fa-file-pdf me-2"></i>Modelos de Resumo e Título</a>
+            <a href="docs/pocket_guide_linkedin.pdf" class="material-link" target="_blank"><i class="fas fa-file-pdf me-2"></i>Modelos de Resumo e Título</a>
           </div>
         </div>
         <div class="event" data-aos="fade-up" data-aos-delay="200">
           <h3>Aula 3: Networking, Conteúdo e Oportunidades</h3>
           <p>Aprenda a fazer conexões estratégicas e a se comunicar com profissionais. Descubra como encontrar vagas perfeitas pra você e como se destacar nas candidaturas.</p>
           <div class="mt-3">
-            <a href="#" class="material-link"><i class="fas fa-file-pdf me-2"></i>Guia: Como Buscar Vagas no LinkedIn</a>
+            <a href="docs/pocket_guide_linkedin.pdf" class="material-link" target="_blank"><i class="fas fa-file-pdf me-2"></i>Guia: Como Buscar Vagas no LinkedIn</a>
           </div>
         </div>
         <div class="event" data-aos="fade-up" data-aos-delay="300">
           <h3>Aula 4: Otimização Avançada e Preparação pro Mercado</h3>
           <p>Domine técnicas avançadas pra seu perfil aparecer nas buscas dos recrutadores. Aprenda a pedir recomendações, destacar suas habilidades e se preparar pra entrevistas.</p>
           <div class="mt-3">
-            <a href="#" class="material-link"><i class="fas fa-file-pdf me-2"></i>Checklist de Perfil Otimizado</a>
+            <a href="docs/pocket_guide_linkedin.pdf" class="material-link" target="_blank"><i class="fas fa-file-pdf me-2"></i>Checklist de Perfil Otimizado</a>
           </div>
         </div>
       </div>
@@ -211,7 +211,7 @@
             <p>Ao completar todas as atividades, você recebe seu certificado digital por e-mail.</p>
           </div>
           <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="500">
-            <a href="#" class="btn btn-primary btn-lg">Quero Me Inscrever!</a>
+            <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#inscricaoModal">Quero Me Inscrever!</button>
           </div>
         </div>
       </div>
@@ -249,6 +249,80 @@
     </div>
   </section>
 
+  <!-- MODAL DE INSCRIÇÃO -->
+  <div class="modal fade" id="inscricaoModal" tabindex="-1" aria-labelledby="inscricaoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="inscricaoModalLabel">Inscrição - LinkedIn para Jovens Aprendizes</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formInscricao">
+            <div class="row mb-3">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label for="nome" class="form-label">Nome Completo*</label>
+                <input type="text" class="form-control" id="nome" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">E-mail*</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label for="telefone" class="form-label">Telefone/WhatsApp*</label>
+                <input type="tel" class="form-control" id="telefone" required>
+              </div>
+              <div class="col-md-6">
+                <label for="idade" class="form-label">Idade*</label>
+                <input type="number" class="form-control" id="idade" min="14" max="30" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="escolaridade" class="form-label">Escolaridade*</label>
+              <select class="form-select" id="escolaridade" required>
+                <option value="" selected disabled>Selecione...</option>
+                <option value="Ensino Fundamental">Ensino Fundamental</option>
+                <option value="Ensino Médio Incompleto">Ensino Médio Incompleto</option>
+                <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                <option value="Ensino Técnico">Ensino Técnico</option>
+                <option value="Ensino Superior Incompleto">Ensino Superior Incompleto</option>
+                <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="experiencia" class="form-label">Experiência com LinkedIn</label>
+              <select class="form-select" id="experiencia">
+                <option value="Nunca usei">Nunca usei</option>
+                <option value="Tenho perfil mas não uso muito">Tenho perfil mas não uso muito</option>
+                <option value="Uso regularmente">Uso regularmente</option>
+                <option value="Uso frequentemente">Uso frequentemente</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="expectativa" class="form-label">O que você espera do curso?</label>
+              <textarea class="form-control" id="expectativa" rows="3"></textarea>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="termos" required>
+              <label class="form-check-label" for="termos">Concordo com os termos de uso e política de privacidade*</label>
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="whatsapp">
+              <label class="form-check-label" for="whatsapp">Quero receber informações pelo WhatsApp</label>
+            </div>
+            <p class="text-muted small">* Campos obrigatórios</p>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="btnEnviar">Enviar Inscrição</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer>
     <div class="container">
@@ -260,11 +334,11 @@
         <div class="col-md-3 mb-4 mb-md-0">
           <h5>Links Rápidos</h5>
           <ul class="list-unstyled">
-            <li><a href="#home" class="footer-link">Home</a></li>
-            <li><a href="#sobre" class="footer-link">Sobre</a></li>
-            <li><a href="#conteudo" class="footer-link">Conteúdo</a></li>
-            <li><a href="#beneficios" class="footer-link">Benefícios</a></li>
-            <li><a href="#como-participar" class="footer-link">Como Participar</a></li>
+            <li><a href="index.html#home" class="footer-link">Home</a></li>
+            <li><a href="index.html#sobre" class="footer-link">Sobre</a></li>
+            <li><a href="index.html#conteudo" class="footer-link">Conteúdo</a></li>
+            <li><a href="index.html#beneficios" class="footer-link">Benefícios</a></li>
+            <li><a href="index.html#como-participar" class="footer-link">Como Participar</a></li>
           </ul>
         </div>
         <div class="col-md-3">
@@ -316,6 +390,18 @@
         navbar.style.padding = '0.5rem 1rem';
       } else {
         navbar.style.padding = '1rem';
+      }
+    });
+
+    // Processar formulário de inscrição
+    document.getElementById('btnEnviar').addEventListener('click', function() {
+      const form = document.getElementById('formInscricao');
+      if (form.checkValidity()) {
+        alert('Inscrição enviada com sucesso! Em breve entraremos em contato.');
+        document.getElementById('inscricaoModal').querySelector('.btn-close').click();
+        form.reset();
+      } else {
+        form.reportValidity();
       }
     });
   </script>
