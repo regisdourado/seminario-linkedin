@@ -4,47 +4,91 @@
   <meta charset="UTF-8">
   <title>LinkedIn para Jovens Aprendizes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">LinkedIn Jovem</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#conteudo">Conteúdo</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#beneficios">Benefícios</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#como-participar">Como Participar</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
-        </ul>
+  <header>
+    <span class="logo">LinkedIn Jovem</span>
+    <nav>
+      <a href="index.html">🏠 Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#modulos">Conteúdo</a>
+      <a href="#funciona">Como Funciona</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>LinkedIn para Jovens Aprendizes</h1>
+      <p>Impulsione sua carreira! Aprenda a criar um perfil campeão, fazer networking e conquistar oportunidades no LinkedIn.</p>
+      <a class="btn cta" href="#modulos">Comece Agora</a>
+    </section>
+    <section id="sobre">
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">Sobre o Curso</div>
+          <div class="card-desc">Curso prático e online para jovens de 16 a 21 anos. Aprenda a usar o LinkedIn para crescer profissionalmente, com linguagem simples e exemplos reais.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Para Quem?</div>
+          <div class="card-desc">Voltado para estudantes do ensino médio/técnico e jovens aprendizes que querem se destacar no mercado de trabalho.</div>
+        </div>
       </div>
-    </div>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <section id="home" class="hero-section position-relative d-flex align-items-center justify-content-center">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content text-center" data-aos="fade-up">
-      <h1 class="display-4 fw-bold mb-3">LinkedIn para Jovens Aprendizes</h1>
-      <p class="lead mb-4">Dê um boost na sua carreira com o LinkedIn! Aprenda a criar um perfil que chama atenção, fazer conexões e encontrar oportunidades. Curso 100% prático e online!</p>
-      <div class="d-flex justify-content-center gap-3">
-        <a href="index.html#como-participar" class="btn btn-warning btn-lg shadow">Quero Participar</a>
-        <a href="index.html#conteudo" class="btn btn-outline-light btn-lg">Ver Conteúdo</a>
+    </section>
+    <section id="beneficios">
+      <h2 class="section-title">Benefícios do Curso</h2>
+      <div class="cards">
+        <div class="card"><div class="card-title">100% Online</div><div class="card-desc">Acesse de onde quiser, no seu ritmo.</div></div>
+        <div class="card"><div class="card-title">Certificado Digital</div><div class="card-desc">Receba certificado ao concluir todas as etapas.</div></div>
+        <div class="card"><div class="card-title">Grupo Exclusivo</div><div class="card-desc">Tire dúvidas e faça networking com outros jovens.</div></div>
+        <div class="card"><div class="card-title">Conteúdo Atualizado</div><div class="card-desc">Tudo sobre LinkedIn, com dicas práticas e atuais.</div></div>
       </div>
-    </div>
-  </section>
-
-  <!-- SOBRE SECTION -->
+    </section>
+    <section id="modulos">
+      <h2 class="section-title">Conteúdo Programático</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">Módulo 1: LinkedIn & Marca Pessoal</div>
+          <div class="card-desc">O que é LinkedIn? Como criar uma marca pessoal forte e se destacar.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Módulo 2: Perfil Campeão</div>
+          <div class="card-desc">Monte um perfil completo, com foto, resumo, experiências e conquistas.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Módulo 3: Networking e Oportunidades</div>
+          <div class="card-desc">Aprenda a se conectar, participar de grupos e buscar vagas certas para você.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Módulo 4: Preparação para o Mercado</div>
+          <div class="card-desc">Dicas de currículo, entrevistas e como usar o LinkedIn para crescer.</div>
+        </div>
+      </div>
+    </section>
+    <section id="funciona">
+      <h2 class="section-title">Como Funciona</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card-title">Aulas Curtas</div>
+          <div class="card-desc">Vídeos e materiais objetivos, direto ao ponto.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Exercícios Práticos</div>
+          <div class="card-desc">Aprenda fazendo, com atividades para cada módulo.</div>
+        </div>
+        <div class="card">
+          <div class="card-title">Suporte</div>
+          <div class="card-desc">Tire dúvidas pelo grupo exclusivo ou e-mail.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a class="footer-btn" href="index.html">⬅️ Voltar para a Home</a>
+    <div class="copyright">&copy; 2025 LinkedIn para Jovens Aprendizes. Todos os direitos reservados.</div>
+  </footer>
+</body>
   <section id="sobre" class="py-5">
     <div class="container">
       <div class="row align-items-center">
