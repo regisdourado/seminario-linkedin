@@ -25,6 +25,19 @@
   </style>
 </head>
 <body>
+<script>
+  // Exemplo de verificação: exige que 'userLoggedIn' esteja no localStorage
+  if (!localStorage.getItem('userLoggedIn')) {
+    alert('Acesso não autorizado. Faça login para continuar.');
+    window.location.href = '../../index.html';
+  }
+</script>
+  <!-- Botão Home fixo no topo esquerdo -->
+  <div style="position: fixed; top: 20px; left: 20px; z-index: 1000;">
+    <a href="../../index.html" class="btn btn-primary">
+      <i class="fas fa-home"></i> Home
+    </a>
+  </div>
 <div id="slides">
   <!-- Slide 1: Capa -->
   <section class="slide active">
@@ -142,9 +155,9 @@
     <div class="slide-title">Materiais Complementares</div>
     <div class="slide-content">
       <ul class="slide-list">
-        <li><a href="pdf_guia_linkedin.html" target="_blank">PDF: Guia Rápido - O que é LinkedIn?</a></li>
-        <li><a href="https://www.linkedin.com/help/linkedin/answer/a51649" target="_blank">Ajuda Oficial do LinkedIn</a></li>
-        <li><a href="curso_linkedin_materiais.html">Mais materiais do curso</a></li>
+        <li><a href="pdf_guia_linkedin.html" target="_blank" rel="noopener noreferrer">PDF: Guia Rápido - O que é LinkedIn?</a></li>
+        <li><a href="https://www.linkedin.com/help/linkedin/answer/a51649" target="_blank" rel="noopener noreferrer">Ajuda Oficial do LinkedIn</a></li>
+        <li><a href="curso_linkedin_materiais.html" target="_blank" rel="noopener noreferrer">Mais materiais do curso</a></li>
       </ul>
     </div>
   </section>
@@ -156,14 +169,24 @@
         <li>Atualize seu perfil regularmente</li>
         <li>Conecte-se com colegas, professores e profissionais</li>
         <li>Compartilhe conquistas e projetos</li>
-        <li>Participe do grupo de networking: <a href="https://chat.whatsapp.com/EorqXsk3htc0wKnBmmvZvA" target="_blank">Clique aqui</a></li>
+        <li>
+          Participe do grupo de networking:
+          <a href="https://chat.whatsapp.com/EorqXsk3htc0wKnBmmvZvA" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i> Entrar no Grupo WhatsApp
+          </a>
+        </li>
       </ul>
     </div>
   </section>
   <!-- Slide 13: Fim -->
   <section class="slide">
     <div class="slide-title">Fim da Aula 1</div>
-    <div class="slide-content">Dúvidas? Pergunte no grupo ou acesse os materiais complementares.<br><a href="curso_linkedin_index.html">Voltar ao Portal do Curso</a></div>
+    <div class="slide-content">
+      Dúvidas? Pergunte no grupo ou acesse os materiais complementares.<br>
+      <a href="curso_linkedin_index.html" class="btn btn-outline-primary mt-3" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-arrow-left"></i> Voltar ao Portal do Curso
+      </a>
+    </div>
   </section>
 </div>
 <div class="slide-nav">

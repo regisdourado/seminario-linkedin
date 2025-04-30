@@ -131,21 +131,32 @@
   <button id="prevSlide" disabled>&lt; Anterior</button>
   <button id="nextSlide">Próximo &gt;</button>
 </div>
-<div class="slide-footer">Curso LinkedIn Jovem • Aula 3</div>
+<div class="slide-footer">
+  <span id="slideCounter">Slide 1/10</span> • Curso LinkedIn Jovem • Aula 3
+</div>
 <script>
   const slides = document.querySelectorAll('.slide');
   let current = 0;
+  const totalSlides = slides.length;
+  const slideCounter = document.getElementById('slideCounter');
+
   function showSlide(idx) {
     slides.forEach((s, i) => s.classList.toggle('active', i === idx));
     document.getElementById('prevSlide').disabled = idx === 0;
     document.getElementById('nextSlide').disabled = idx === slides.length - 1;
+    // Atualiza contador de slides
+    slideCounter.textContent = `Slide ${idx + 1}/${totalSlides}`;
   }
+
   document.getElementById('prevSlide').onclick = function() { if (current > 0) showSlide(--current); };
   document.getElementById('nextSlide').onclick = function() { if (current < slides.length - 1) showSlide(++current); };
   document.addEventListener('keydown', function(e){
     if(e.key === 'ArrowRight') document.getElementById('nextSlide').click();
     if(e.key === 'ArrowLeft') document.getElementById('prevSlide').click();
   });
+
+  // Garante que o contador aparece corretamente ao carregar
+  showSlide(current);
 </script>
 </body>
 </html>
