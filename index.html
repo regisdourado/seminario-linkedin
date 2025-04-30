@@ -450,6 +450,9 @@
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
   <script>
     // Inicializar AOS (Animate On Scroll)
     AOS.init({
@@ -477,22 +480,70 @@
       }
     });
 
+    // 1. Configuração do Firebase (já está correto)
+    const firebaseConfig = {
+      apiKey: "AIzaSyC6x87iZm1OdpaAdZDVdLb3A5BHBVMGfc",
+      authDomain: "seminariolinkedin-projetofumt.firebaseapp.com",
+      projectId: "seminariolinkedin-projetofumt",
+      storageBucket: "seminariolinkedin-projetofumt.appspot.com",
+      messagingSenderId: "11580809889",
+      appId: "1:11580809889:web:1aa8104a7f83243f78e0e8",
+      measurementId: "G-ZRZJ1NIVBP",
+      databaseURL: "https://seminariolinkedin-projetofumt-default-rtdb.firebaseio.com/"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+
+    // (Opcional) Inicializar Analytics se quiser, usando compat:
+    if ('measurementId' in firebaseConfig) {
+      // Carregar analytics só se necessário
+      // <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"></script>
+      if (typeof firebase.analytics === "function") {
+        firebase.analytics();
+      }
+    }
+
     // Processar formulário de inscrição
     document.getElementById('btnEnviar').addEventListener('click', function() {
       const form = document.getElementById('formInscricao');
       if (form.checkValidity()) {
-        alert('Inscrição enviada com sucesso! Em breve entraremos em contato.');
-        document.getElementById('inscricaoModal').querySelector('.btn-close').click();
-        form.reset();
+        // Coletar dados do formulário
+        const inscricao = {
+          nome: document.getElementById('nome').value,
+          email: document.getElementById('email').value,
+          telefone: document.getElementById('telefone').value,
+          idade: document.getElementById('idade').value,
+          escolaridade: document.getElementById('escolaridade').value,
+          experiencia: document.getElementById('experiencia').value,
+          expectativa: document.getElementById('expectativa').value,
+          termos: document.getElementById('termos').checked,
+          whatsapp: document.getElementById('whatsapp').checked,
+          dataEnvio: new Date().toISOString()
+        };
+
+        // 2. Salvar no Firebase
+        database.ref('inscricoes').push(inscricao)
+          .then(function() {
+            alert('Inscrição enviada com sucesso! Em breve entraremos em contato.');
+            document.getElementById('inscricaoModal').querySelector('.btn-close').click();
+            form.reset();
+          })
+          .catch(function(error) {
+            alert('Erro ao enviar inscrição: ' + error.message);
+          });
       } else {
         form.reportValidity();
       }
     });
 
-    // Exibir banner ao abrir a página
+    // Exibir banner ao abrir a página SOMENTE na primeira visita
     window.addEventListener('DOMContentLoaded', function() {
-      var bannerModal = new bootstrap.Modal(document.getElementById('bannerModal'));
-      bannerModal.show();
+      if (!localStorage.getItem('bannerModalShown')) {
+        var bannerModal = new bootstrap.Modal(document.getElementById('bannerModal'));
+        bannerModal.show();
+        localStorage.setItem('bannerModalShown', 'true');
+      }
     });
   </script>
 </body>
