@@ -501,7 +501,9 @@
     }
 
     // Form submission handler
-    document.getElementById('btnEnviar').addEventListener('click', function() {
+    document.getElementById('btnEnviar').addEventListener('click', function(event) {
+      event.preventDefault(); // Impede comportamento padrão do botão
+
       const form = document.getElementById('formInscricao');
       if (form.checkValidity()) {
         const inscricao = {
@@ -520,7 +522,9 @@
         database.ref('inscricoes').push(inscricao)
           .then(function() {
             alert('Inscrição enviada com sucesso! Em breve entraremos em contato.');
-            document.getElementById('inscricaoModal').querySelector('.btn-close').click();
+            // Fecha o modal de forma segura usando a API do Bootstrap
+            var modal = bootstrap.Modal.getInstance(document.getElementById('inscricaoModal'));
+            if (modal) modal.hide();
             form.reset();
           })
           .catch(function(error) {
