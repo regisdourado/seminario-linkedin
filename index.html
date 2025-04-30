@@ -480,7 +480,7 @@
       }
     });
 
-    // 1. Configuração do Firebase (já está correto)
+    // Firebase configuration and initialization
     const firebaseConfig = {
       apiKey: "AIzaSyC6x87iZm1OdpaAdZDVdLb3A5BHBVMGfc",
       authDomain: "seminariolinkedin-projetofumt.firebaseapp.com",
@@ -495,20 +495,15 @@
     firebase.initializeApp(firebaseConfig);
     const database = firebase.database();
 
-    // (Opcional) Inicializar Analytics se quiser, usando compat:
-    if ('measurementId' in firebaseConfig) {
-      // Carregar analytics só se necessário
-      // <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics-compat.js"></script>
-      if (typeof firebase.analytics === "function") {
-        firebase.analytics();
-      }
+    // Initialize Analytics if available
+    if ('measurementId' in firebaseConfig && typeof firebase.analytics === "function") {
+      firebase.analytics();
     }
 
-    // Processar formulário de inscrição
+    // Form submission handler
     document.getElementById('btnEnviar').addEventListener('click', function() {
       const form = document.getElementById('formInscricao');
       if (form.checkValidity()) {
-        // Coletar dados do formulário
         const inscricao = {
           nome: document.getElementById('nome').value,
           email: document.getElementById('email').value,
@@ -522,7 +517,6 @@
           dataEnvio: new Date().toISOString()
         };
 
-        // 2. Salvar no Firebase
         database.ref('inscricoes').push(inscricao)
           .then(function() {
             alert('Inscrição enviada com sucesso! Em breve entraremos em contato.');
@@ -537,7 +531,7 @@
       }
     });
 
-    // Exibir banner ao abrir a página SOMENTE na primeira visita
+    // Banner modal handler
     window.addEventListener('DOMContentLoaded', function() {
       if (!localStorage.getItem('bannerModalShown')) {
         var bannerModal = new bootstrap.Modal(document.getElementById('bannerModal'));
@@ -545,7 +539,6 @@
         localStorage.setItem('bannerModalShown', 'true');
       }
     });
-    // Certifique-se de que o script termina aqui:
   </script>
 </body>
 </html>
